@@ -27,24 +27,30 @@ def win(w):
         print("winner is ",winner)
         printBoard(theBoard)
         sys.exit()
+    else:
+        return
+    
     
 
 turn = 'X'
 for i in range(9):
-    printBoard(theBoard)
-    print('Turn for ' + turn + '. Move on which space?(0 to 8)')
-    move = int(input())
-    if turn == 'X':
-        theBoard[move] = 'X'
-    else:
-        theBoard[move] = 'O'
+      printBoard(theBoard)
+      print('Turn for ' + turn + '. Move on which space?(0 to 8)')
+      move = int(input())
+      if turn == 'X':
+          theBoard[move] = 'X'
+      else:
+          theBoard[move] = 'O'
 
-    if turn == 'X':
-        turn = 'O'
-    else:
-        turn = 'X'
-    if i>=4 and i<=8:
-        win(theBoard)
-    elif i==9:
-        print("the game has tied")
-        sys.exit()
+      if turn == 'X':
+          turn = 'O'
+      else:
+          turn = 'X'
+      if i>=5 and i<=9:
+          win(theBoard)
+print("Game has tied")
+   
+  
+    
+    
+  
