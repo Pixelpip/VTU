@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<math.h>
 #include<string.h>
+#include<ctype.h>
 
 float compute(char symbol, float op1, float op2)
 {
