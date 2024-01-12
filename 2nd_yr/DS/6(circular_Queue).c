@@ -6,8 +6,8 @@
 //d. Display the status of Circular QUEUE
 //e. Exit
 ////Support the program with appropriate functions for each of the above operations
-#include<stdio.h>
 #include<stdlib.h>
+#include<stdio.h>
 #define MAX 4 
 int ch, front = 0, rear = -1, count=0;
 char q[MAX], item;
@@ -65,11 +65,12 @@ void main()
   printf("\n1. Insert\n2. Delete\n3. Display\n4. Exit");
   printf("\nEnter the choice: ");
   scanf("%d", &ch);
-  __fpurge(stdin);
+  fflush(stdin);
   switch(ch)
   {
    case 1: printf("\nEnter the character / item to be inserted: ");
-           scanf("%c", &item);
+       scanf(" %c", &item);//ADD A SPACE TO %c SO THAT THE NEWLINE CHARCTER GETS CONSUMED AND INPUT
+       //TO THE QUEUE ACTUALLY HAPPENS
            insert();
            break;
    case 2: del();
